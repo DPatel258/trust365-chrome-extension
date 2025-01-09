@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust365 Password Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      width: 600px;
+      box-sizing: border-box;
+    }
+    header {
+      background-color: red;
+      color: white;
+      padding: 5px;
+      text-align: center;
+    }
+    header h1{position: relative;}
+    header h1 button{
+        background: #000;
+        width: auto;
+        margin-left: auto;
+        margin-right: 0;
+        position: absolute;
+        right: 6px;
+        top: -5px;
+    }
+    h1 { font-size: 20px; }
+    h2 { font-size: 18px; }
+    footer {
+      background-color: red;
+      color: white;
+      padding: 8px;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .password-list {
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .password-item {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+    .password-item:hover {
+      background-color: #f0f0f0;
+    }
+    .logo {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .logo img {
+      width: 50px;
+      height: auto;
+    }
+    .login-container, .password-container {
+      display: none; 
+      width: 60%;
+      margin: 0 auto;
+    }
+    input {
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: red;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      background-color: darkred;
+    }
+    .password-container {
+      text-align: center;
+          width: 90%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Trust365 Password Manager<button id="logoutButton">Logout</button>
+</h1>
+  </header>
+
+  <div class="logo">
+    <img src="logo.png" alt="Trust365 Logo" />
+  </div>
+
+  <!-- Login Section -->
+  <div id="login-section" class="login-container">
+    <h2>Login to Access Your Passwords</h2>
+    <input type="email" id="email" placeholder="Enter your email" required />
+    <!-- <input type="password" id="password" placeholder="Enter your password" required /> -->
+    <button id="login-button">Login</button>
+  </div>
+
+  <!-- Password Section -->
+  <div id="password-section" class="password-container">
+    <button id="fetch-passwords">Fetch Password Records</button>
+    <div class="password-list" id="password-list">
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Trust365</p>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
