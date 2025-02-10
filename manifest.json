@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Trust365 Password Manager",
+  "name": "Datasurance Password Manager",
   "description": "Password Manager to view stored passwords.",
   "version": "1.0",
   "permissions": [

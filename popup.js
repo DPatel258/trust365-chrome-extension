@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function loginUser(email) {
-        fetch('https://dev.consumer.trust365.com/api/extension_login', {
+        fetch('https://app.datasurance.co.uk/api/extension_login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email }),
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to poll for login status
     function pollForStatus(loginRequestId) {
         const intervalId = setInterval(() => {
-            fetch(`https://dev.consumer.trust365.com/api/getloginstatus/${loginRequestId}`, {
+            fetch(`https://app.datasurance.co.uk/api/getloginstatus/${loginRequestId}`, {
                 method: 'POST',
             })
                 .then(response => response.json())
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            fetch('https://dev.consumer.trust365.com/api/getpassword', {
+            fetch('https://app.datasurance.co.uk/api/getpassword', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     async function decryptData(apiResponse, token) {
-        const response = await fetch('https://dev.consumer.trust365.com/api/decryptdata', {
+        const response = await fetch('https://app.datasurance.co.uk/api/decryptdata', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
